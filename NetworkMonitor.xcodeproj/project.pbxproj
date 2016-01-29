@@ -15,6 +15,9 @@
 		75BEE17B1C5B3B14006881BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BEE1791C5B3B14006881BC /* LaunchScreen.storyboard */; };
 		75BEE1861C5B3B14006881BC /* NetworkMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BEE1851C5B3B14006881BC /* NetworkMonitorTests.m */; };
 		75BEE1911C5B3B14006881BC /* NetworkMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BEE1901C5B3B14006881BC /* NetworkMonitorUITests.m */; };
+		75BEE1AC1C5B3B31006881BC /* CoreStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BEE1A01C5B3B31006881BC /* CoreStatus.m */; };
+		75BEE1AD1C5B3B31006881BC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BEE1A61C5B3B31006881BC /* Reachability.m */; };
+		75BEE1AE1C5B3B31006881BC /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BEE1AB1C5B3B31006881BC /* CALayer+Transition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,15 @@
 		75BEE18C1C5B3B14006881BC /* NetworkMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BEE1901C5B3B14006881BC /* NetworkMonitorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkMonitorUITests.m; sourceTree = "<group>"; };
 		75BEE1921C5B3B14006881BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75BEE19F1C5B3B31006881BC /* CoreStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatus.h; sourceTree = "<group>"; };
+		75BEE1A01C5B3B31006881BC /* CoreStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreStatus.m; sourceTree = "<group>"; };
+		75BEE1A21C5B3B31006881BC /* CoreNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreNetworkStatus.h; sourceTree = "<group>"; };
+		75BEE1A31C5B3B31006881BC /* CoreStatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatusProtocol.h; sourceTree = "<group>"; };
+		75BEE1A51C5B3B31006881BC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		75BEE1A61C5B3B31006881BC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		75BEE1A81C5B3B31006881BC /* CoreStatusSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatusSingleton.h; sourceTree = "<group>"; };
+		75BEE1AA1C5B3B31006881BC /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		75BEE1AB1C5B3B31006881BC /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		75BEE16A1C5B3B14006881BC /* NetworkMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				75BEE19E1C5B3B31006881BC /* CoreStatus */,
+				75BEE1A91C5B3B31006881BC /* Frameworks */,
 				75BEE16E1C5B3B14006881BC /* AppDelegate.h */,
 				75BEE16F1C5B3B14006881BC /* AppDelegate.m */,
 				75BEE1711C5B3B14006881BC /* ViewController.h */,
@@ -138,6 +152,53 @@
 				75BEE1921C5B3B14006881BC /* Info.plist */,
 			);
 			path = NetworkMonitorUITests;
+			sourceTree = "<group>";
+		};
+		75BEE19E1C5B3B31006881BC /* CoreStatus */ = {
+			isa = PBXGroup;
+			children = (
+				75BEE19F1C5B3B31006881BC /* CoreStatus.h */,
+				75BEE1A01C5B3B31006881BC /* CoreStatus.m */,
+				75BEE1A11C5B3B31006881BC /* Lib */,
+			);
+			path = CoreStatus;
+			sourceTree = "<group>";
+		};
+		75BEE1A11C5B3B31006881BC /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				75BEE1A21C5B3B31006881BC /* CoreNetworkStatus.h */,
+				75BEE1A31C5B3B31006881BC /* CoreStatusProtocol.h */,
+				75BEE1A41C5B3B31006881BC /* Reachability */,
+				75BEE1A71C5B3B31006881BC /* Singleton */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		75BEE1A41C5B3B31006881BC /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				75BEE1A51C5B3B31006881BC /* Reachability.h */,
+				75BEE1A61C5B3B31006881BC /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		75BEE1A71C5B3B31006881BC /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				75BEE1A81C5B3B31006881BC /* CoreStatusSingleton.h */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		75BEE1A91C5B3B31006881BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75BEE1AA1C5B3B31006881BC /* CALayer+Transition.h */,
+				75BEE1AB1C5B3B31006881BC /* CALayer+Transition.m */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BEE1AC1C5B3B31006881BC /* CoreStatus.m in Sources */,
 				75BEE1731C5B3B14006881BC /* ViewController.m in Sources */,
 				75BEE1701C5B3B14006881BC /* AppDelegate.m in Sources */,
 				75BEE16D1C5B3B14006881BC /* main.m in Sources */,
+				75BEE1AE1C5B3B31006881BC /* CALayer+Transition.m in Sources */,
+				75BEE1AD1C5B3B31006881BC /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
